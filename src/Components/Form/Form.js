@@ -6,7 +6,7 @@ class Form extends Component {
 
    this.state = {
      input: "",
-     tasks: ["task1", "task3"],
+    //  tasks: [],
    }
 
    this.handleChange = this.handleChange.bind(this)
@@ -25,18 +25,22 @@ class Form extends Component {
   e.preventDefault()
    console.log(this.state.input)
    const taskTextInput = this.state.input
-   const taskList = this.state.tasks
-this.setState ({
-  tasks: [...taskList, taskTextInput],
+
+
+this.props.handleInput(taskTextInput)
+
+this.setState({
+  input:""
 })
 
  }
   render() {
-  
+  const {tasks} = this.state
     return (
       <form onSubmit={this.handleSubmit}>
-        <input type="text" placeholder="Add task" onChange={this.handleChange}/>
+        <input type="text" placeholder="Add task" onChange={this.handleChange} value={this.state.input}/>
         <button>Add</button>
+        <div>{tasks}</div>
       </form>
     )
   }

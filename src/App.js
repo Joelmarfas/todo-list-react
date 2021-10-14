@@ -1,26 +1,15 @@
 import './App.css';
 import Form from './Components/Form/Form';
+import TaskList from './Components/TaskList/TaskList';
 
 function App() {
+  // const {tasks} = this.props
   return (
     <main>
       <h1>TODO LIST</h1>
-      <Form />
+        <Form />
       <div>
-        <ul>
-         <div>
-         <li>task 1</li>
-         <button>Del</button>
-         </div>
-         <div>
-         <li>task 2</li>
-         <button>Del</button>
-         </div>
-         <div>
-         <li>task 3</li>
-         <button>Del</button>
-         </div>
-        </ul>
+        <TaskList  />
       </div>
     </main>
   );

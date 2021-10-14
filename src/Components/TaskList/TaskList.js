@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import uuid from 'react-uuid'
 import Task from '../Task/Task'
 
 class TaskList extends Component {
@@ -6,7 +7,9 @@ class TaskList extends Component {
     const {tasks} = this.props
     return (
       <ul>
-          <Task tasks={tasks}/>
+        {tasks.map((task)=>
+          <Task tasks={tasks} task={task} key={uuid()}/>
+          )}
       </ul>
     )
   }

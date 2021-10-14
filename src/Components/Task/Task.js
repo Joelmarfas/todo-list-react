@@ -3,17 +3,17 @@ import "./Task.css"
 
 class Task extends Component {
   render() {
-    const {tasks} = this.props
+    const { task} = this.props
     return (
-    <>
-      {tasks.map((task)=>
-      <div className="row">
+    
+      
+      <div className="row" >
         <li>{task}</li>
         <button>DEL</button>
         <button>EDIT</button> 
       </div>
-      )}
-    </>
+      
+    
     )
   }
 }

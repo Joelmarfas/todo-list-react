@@ -1,17 +1,19 @@
 import React, { Component } from 'react'
+import DelBtn from '../Buttons/DelBtn'
 import "./Task.css"
 
 class Task extends Component {
   render() {
-    const { task} = this.props
+    const {task, tasks} = this.props
     return (
     
       
       <div className="row" >
         <li>{task}</li>
-        <button>DEL</button>
+        <DelBtn tasks={tasks}/>
         <button>EDIT</button> 
       </div>
+
       
     
     )

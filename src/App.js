@@ -22,14 +22,13 @@ handleInput(newTask) {
 }
 
   render() {
-    // const {tasks} = this.state
-    // console.log(tasks)
+    const {tasks} = this.state
     return (
       <main>
       <h1>TODO LIST</h1>
         <Form handleInput={this.handleInput}/>
       <div>
-        <TaskList tasks={this.state.tasks} />
+        <TaskList tasks={tasks} />
       </div>
     </main>
     )

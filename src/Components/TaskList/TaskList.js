@@ -1,14 +1,12 @@
 import React, { Component } from 'react'
+import Task from '../Task/Task'
 
 class TaskList extends Component {
   render() {
     const {tasks} = this.props
     return (
       <ul>
-          {tasks.map((task)=>
-            <li>{task}</li>
-          )}
-
+          <Task tasks={tasks}/>
       </ul>
     )
   }
